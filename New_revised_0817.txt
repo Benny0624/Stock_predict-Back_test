@@ -1,0 +1,69 @@
+//Value setting
+
+inputs:
+Len(20), // 移動平均計算日長 
+Len2(2), // 高低點日長
+NumDevsDn(2),  //內層標準差
+NumDevsDn_1(2.5),  //外層標準差
+rocCalcLength(14); //回看斜率天數
+
+vars:
+upBB(0), // 上外層
+upBB_1(0), // 上內層
+MA(0), // 移動平均
+downBB_1(0), // 下內層
+downBB(0), // 下外層
+rocCalc(0), // 斜率
+v1(0); // 停損用濾網
+
+     
+//Bollinger Bands Extend version
+upBB = BollingerBand(Close,Len,NumDevsDn_1); // 2.5 倍標準差
+upBB_1 = BollingerBand(Close,Len,NumDevsDn); // 2 倍標準差
+MA = AverageFC(Close, Len);  // 移動平均
+downBB_1 = BollingerBand(Close,Len,-NumDevsDn); // 2 倍標準差
+downBB = BollingerBand(Close,Len,-NumDevsDn_1); // 2.5 倍標準差
+rocCalc = close-close[rocCalcLength]; //回看斜率
+
+//Value setting
+v1 = absvalue(upBB_1 - MA); // 停損標準
+
+//Condition Setting
+//用二條線(upBB,upBB_1,upBB_in)夾兩個區間(condition1,2)抓賣出高點(逆勢)
+condition1 = c >= upBB_1 and c < upBB ; 
+condition2 = rocCalc < 0 and c < MA ; //增加交易次數用
+
+//用二條線(downBB,downBB_1,downBB_in)夾兩個區間(condition3,5)抓買進低點(逆勢)
+condition3 = c < downBB and c >= downBB_1;
+condition4 = rocCalc > 0 and c > MA ; //增加交易次數用
+
+condition5 = c > upBB; //順勢
+condition6 = c < downBB; //順勢
+
+//最內兩條線(upBB_in, downBB_in)內區間做通道突破
+condition7 = c <upBB_1 and c > downBB_1; 
+condition8 = c > Highest(h, Len2)[1];
+condition9 = c < Lowest(l, Len2)[1];
+
+//Market manipunation
+if condition2 and EntriesToday(date)<1 then buy next bar at market;
+if condition3 and EntriesToday(date)<1 then buy next bar at market;
+
+
+if condition1 and EntriesToday(date)<1 then sellshort next bar at market;
+if condition4 and EntriesToday(date)<1 then sellshort next bar at market;
+
+
+if condition5 and EntriesToday(date)<1 then buy next bar at market;
+if condition6 and EntriesToday(date)<1 then sellshort next bar at market;
+
+if condition7 and EntriesToday(date)<1 then begin //最內兩條線(upBB_in, downBB_in)內區間增加交易次數
+	if condition8 then buy next bar at Lowest(l, Len2) stop ;
+	if condition9 then sellshort next bar at Highest(h, Len2) stop;
+	end;
+
+	
+//Stop loss
+if marketposition>0 and entryprice-close>v1 then sell next bar at v1 stop; //stop 單
+if marketposition<0 and close-entryprice>v1 then buytocover next bar at v1 limit; // limit 單
+

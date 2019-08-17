@@ -1,9 +1,12 @@
 # Stock_predict-Back_test
 TMBA MultiChart contest
 
-資料期間 : 2012.01.01~2019.06.31
-商品標的 : 台指期(TXF)
-手續費 : 滑價600
+#### 資料期間 : 
+2012.01.01~2019.06.31
+#### 商品標的 : 
+台指期(TXF)
+#### 手續費 : 
+滑價600
 
 ![image](https://img5.androidappsapk.co/300/4/6/5/com.Kway.MultiCharts.png)
 #### 策略發想

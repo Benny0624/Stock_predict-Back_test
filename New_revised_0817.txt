@@ -67,3 +67,5 @@ if condition7 and EntriesToday(date)<1 then begin //最內兩條線(upBB_in, dow
 if marketposition>0 and entryprice-close>v1 then sell next bar at v1 stop; //stop 單
 if marketposition<0 and close-entryprice>v1 then buytocover next bar at v1 limit; // limit 單
 
+//Parameter setting
+![image](https://imgur.com/ZgKGfq0)

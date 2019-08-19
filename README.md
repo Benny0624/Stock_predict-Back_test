@@ -7,7 +7,7 @@
 #### 手續費 : 
 滑價600
 
-![image](img width="10" height="150"　src=https://img5.androidappsapk.co/300/4/6/5/com.Kway.MultiCharts.png)
+<img width="150" height="150" src=https://img5.androidappsapk.co/300/4/6/5/com.Kway.MultiCharts.png>
 #### 策略發想
 根據有效市場理論(Efficient Markets Hypothesis)市場價格皆完整反映交易標的之訊息，且無資訊不對稱之情形發生，且本次競賽標的台指期(TXF)所在之市場台灣，為金融系統完善之市場，故本組假設市場基本上服從常態分布，並以此做策略發想之基礎
 

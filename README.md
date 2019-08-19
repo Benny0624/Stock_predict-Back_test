@@ -35,7 +35,7 @@
 補足規則缺點
 
 #### 參數設定
-<img width="350" height="400" src=https://i.imgur.com/ZgKGfq0.png>
+<img width="400" height="450" src=https://i.imgur.com/ZgKGfq0.png>
 
 #### 績效
 ![image](https://i.imgur.com/nAblI93.png)

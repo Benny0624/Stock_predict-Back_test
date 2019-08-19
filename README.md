@@ -1,4 +1,5 @@
 # TMBA MultiChart contest
+<img width="150" height="150" src=https://img5.androidappsapk.co/300/4/6/5/com.Kway.MultiCharts.png>
 
 #### 資料期間 : 
 2012.01.01~2019.06.31
@@ -6,7 +7,7 @@
 台指期(TXF)
 #### 手續費 : 
 滑價600
-<img width="150" height="150" src=https://img5.androidappsapk.co/300/4/6/5/com.Kway.MultiCharts.png>
+
 #### 策略發想
 根據有效市場理論(Efficient Markets Hypothesis)市場價格皆完整反映交易標的之訊息，且無資訊不對稱之情形發生，且本次競賽標的台指期(TXF)所在之市場台灣，為金融系統完善之市場，故本組假設市場基本上服從常態分布，並以此做策略發想之基礎
 
@@ -34,10 +35,10 @@
 補足規則缺點
 
 #### 參數設定
-<img width="350" height="400" src=https://i.imgur.com/ZgKGfq0.png?1>
+<img width="350" height="400" src=https://i.imgur.com/ZgKGfq0.png?1 alt="交易總績效"/>>
 
 #### 績效
-![image](https://i.imgur.com/nAblI93.png)
+<img width="500" height="500" src=https://i.imgur.com/nAblI93.png>
 ![image](https://i.imgur.com/PYi9OLM.png)
 ![image](https://i.imgur.com/7IRUolK.png)
 ![image](https://i.imgur.com/SfFRI7h.png)

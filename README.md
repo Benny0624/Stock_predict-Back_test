@@ -35,10 +35,10 @@
 補足規則缺點
 
 #### 參數設定
-<img width="350" height="400" src=https://i.imgur.com/ZgKGfq0.png?1 alt="交易總績效"/>>
+<img width="350" height="400" src=https://i.imgur.com/ZgKGfq0.png>
 
 #### 績效
-<img width="500" height="500" src=https://i.imgur.com/nAblI93.png>
+<img width="600" height="600" src=https://i.imgur.com/nAblI93.png alt="策略總積效"/>
 ![image](https://i.imgur.com/PYi9OLM.png)
 ![image](https://i.imgur.com/7IRUolK.png)
 ![image](https://i.imgur.com/SfFRI7h.png)

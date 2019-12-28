@@ -1,5 +1,4 @@
 # TMBA MultiChart contest
-<img width="150" height="150" src=https://img5.androidappsapk.co/300/4/6/5/com.Kway.MultiCharts.png>
 
 #### 資料期間 : 
 2012.01.01~2019.06.31

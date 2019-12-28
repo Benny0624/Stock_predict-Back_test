@@ -1,6 +1,5 @@
 # TMBA x JihSun Trading contest
 ## 2019.10.14(A50當沖比賽)
-<img width="150" height="150" src=https://img5.androidappsapk.co/300/4/6/5/com.Kway.MultiCharts.png>
 
 ### 新華富時A50指數簡介:
 * 基期 : 2003年7月21日；對外公開發佈 : 2004年1月
